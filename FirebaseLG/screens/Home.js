@@ -21,6 +21,8 @@ export default function Home({ navigation }) {
                     <Text style={styles.email}>{auth.currentUser?.email}</Text>
                 </View>
 
+                <Text style={styles.titulo}>Manual - Firebase Authentication com React Native</Text>
+                <Text style={styles.descricao}>Laura Lisboa e Giovanna Cintra</Text>
                 <View style={styles.card1}>
                 <Text style={styles.titulo}>
                     {[
@@ -69,12 +71,11 @@ export default function Home({ navigation }) {
                     </View>
                 </View>
 
-                <Pressable
-                    style={styles.botao}
+                <Button
+                    title='Sair'
                     onPress={realizarLogOut}
-                >
-                    <Text style={styles.textoBotao}>SAIR</Text>
-                </Pressable>
+                    style={styles.botao}
+                />
             </View>
         </View>
     )
@@ -95,9 +96,8 @@ const styles = StyleSheet.create({
     titulo: {
         fontSize: 28,
         fontWeight: "bold",
-        color: "#222",
-        textAlign: "center",
-        marginBottom: 8,
+        color: "#3498db",
+        marginBottom: 15,
     },
 
     card: {
@@ -105,11 +105,11 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         borderRadius: 18,
         padding: 20,
-        marginBottom: 20,
+        marginBottom: 60,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 2,
+            height: 0,
         },
         shadowOpacity: 0.08,
         shadowRadius: 6,
@@ -119,7 +119,6 @@ const styles = StyleSheet.create({
     cardTitulo: {
         fontSize: 14,
         color: "#888",
-        marginBottom: 7,
     },
 
     email: {
@@ -137,38 +136,28 @@ const styles = StyleSheet.create({
     },
 
     botao: {
+        marginTop: 5,
+        marginBottom: 12,
+        borderRadius: 30,
+        overflow: "hidden",
         width: "100%",
-        height: 40,
-        backgroundColor: "#2196f3",
-        borderRadius: 5,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-
-    textoBotao: {
-        color: "#fff",
-        fontSize: 16,
-        fontWeight: "bold",
     },
 
     card1: {
         backgroundColor: "#fff",
         borderRadius: 20,
         padding: 25,
-        elevation: 4,
-        shadowColor: "#000",
-        shadowOpacity: 0.1,
-        shadowRadius: 8,
         marginBottom: 20,
         width: "100%",
-        height: 200
-    },
-
-    titulo: {
-        fontSize: 28,
-        fontWeight: "bold",
-        color: "#3498db",
-        marginBottom: 15,
+        height: 200,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 0,
+        },
+        shadowOpacity: 0.08,
+        shadowRadius: 6,
+        elevation: 3,
     },
     
     descricao: {
